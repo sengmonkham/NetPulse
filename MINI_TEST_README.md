@@ -20,7 +20,7 @@ This is a **minimal working test version** of the NetPulse network health monito
 - **Graceful Shutdown**: Handles Ctrl+C cleanly
 - **Comprehensive Logging**: Detailed logs for monitoring and debugging
 
-## What's Not Implemented ❌
+## What's Not Implemented 
 
 - **P2P Networking**: libp2p integration (planned for Phase 2)
 - **Aggregation Node**: Central data collection and API (planned for Phase 3)
