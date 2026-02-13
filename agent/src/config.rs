@@ -1,6 +1,5 @@
-// Placeholder for configuration management
-
 use serde::{Deserialize, Serialize};
+use std::fs;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AgentConfig {
@@ -29,7 +28,8 @@ pub struct PrivacyConfig {
 
 impl AgentConfig {
     pub fn load(path: &str) -> anyhow::Result<Self> {
-        // TODO: Load configuration from TOML file
-        todo!("Load configuration from {}", path)
+        let contents = fs::read_to_string(path)?;
+        let config: AgentConfig = toml::from_str(&contents)?;
+        Ok(config)
     }
 }

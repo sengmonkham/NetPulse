@@ -27,7 +27,7 @@ impl PrivacyLayer {
     fn sample_laplace(&self, mu: f64, b: f64) -> f64 {
         let mut rng = thread_rng();
         let uniform = Uniform::new(-0.5, 0.5);
-        let u = uniform.sample(&mut rng);
+        let u: f64 = uniform.sample(&mut rng);
         mu - b * u.signum() * (1.0 - 2.0 * u.abs()).ln()
     }
 

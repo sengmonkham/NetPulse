@@ -27,6 +27,7 @@ trust-dns-resolver = "0.23"  # DNS resolution
 reqwest = { version = "0.11", features = ["json"] }  # HTTP checks
 rand = "0.8"  # For differential privacy noise
 statrs = "0.16"  # Statistical functions
+toml = "0.8"  # TOML configuration parsing
 
 [dev-dependencies]
 tokio-test = "0.4"

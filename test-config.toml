@@ -1,0 +1,22 @@
+[network]
+listen_addresses = ["/ip4/0.0.0.0/tcp/0"]
+bootstrap_peers = []
+
+[measurements]
+# Measurement interval in seconds
+interval = 30
+
+# Targets to monitor
+targets = [
+    "google.com",
+    "cloudflare.com",
+    "1.1.1.1",
+    "8.8.8.8",
+    "https://www.google.com",
+    "https://www.cloudflare.com",
+]
+
+[privacy]
+# Privacy budget (epsilon) - lower is more private
+epsilon = 1.0
+enable_geolocation_fuzzing = false
