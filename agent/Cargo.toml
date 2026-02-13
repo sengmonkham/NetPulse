@@ -1,0 +1,32 @@
+[package]
+name = "network-health-agent"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Workspace dependencies
+tokio = { workspace = true }
+libp2p = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sqlx = { workspace = true, features = ["sqlite"] }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+config = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+
+# Agent-specific dependencies
+surge-ping = "0.8"  # ICMP ping
+trust-dns-resolver = "0.23"  # DNS resolution
+reqwest = { version = "0.11", features = ["json"] }  # HTTP checks
+rand = "0.8"  # For differential privacy noise
+statrs = "0.16"  # Statistical functions
+
+[dev-dependencies]
+tokio-test = "0.4"

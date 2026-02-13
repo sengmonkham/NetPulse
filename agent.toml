@@ -1,0 +1,29 @@
+# Network Health Monitoring Agent Configuration
+
+[network]
+# Addresses to listen on for P2P connections
+listen_addresses = ["/ip4/0.0.0.0/tcp/0"]
+
+# Bootstrap peers to connect to initially
+bootstrap_peers = [
+    # Add bootstrap peer multiaddresses here
+    # Example: "/ip4/104.131.131.82/tcp/4001/p2p/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ"
+]
+
+[measurements]
+# Interval between measurement cycles (in seconds)
+interval = 300
+
+# Targets to measure
+targets = [
+    "8.8.8.8",      # Google DNS
+    "1.1.1.1",      # Cloudflare DNS
+    "example.com"   # Example domain
+]
+
+[privacy]
+# Privacy budget (epsilon) - lower = more privacy, less accuracy
+epsilon = 1.0
+
+# Fuzz geolocation to city-level only
+enable_geolocation_fuzzing = true
