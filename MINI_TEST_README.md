@@ -2,7 +2,7 @@
 
 This is a **minimal working test version** of the NetPulse network health monitoring agent. It demonstrates the core functionality of the platform without the full P2P networking and aggregation features.
 
-## What's Implemented ✅
+## What's Implemented
 
 ### Core Measurements
 - **ICMP Ping**: Measures network latency and packet loss using ICMP echo requests
